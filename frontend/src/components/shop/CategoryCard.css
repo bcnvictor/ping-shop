@@ -1,0 +1,33 @@
+.category-card{
+    background-color: var(--color-secondary);
+    border-radius: var(--spacing-0x5rem-xs);
+    box-shadow: var(--shadow-sml);
+    padding: var(--spacing-1x5rem-lrg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 32rem;
+    min-height: 16rem;
+    cursor: pointer;
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.category-card:hover{
+  box-shadow: var(--shadow-mid);
+  transform: scale(1.05);
+}
+
+.card-image{
+    font-size: 8rem; /* 128px */
+  line-height: 1; /* 128px */
+  margin-bottom: var(--spacing-2rem-lrg); /* 16px */
+}
+
+.card-title{
+  text-align: center;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: 500; /* medium */
+  color: var(--color-primary);
+}

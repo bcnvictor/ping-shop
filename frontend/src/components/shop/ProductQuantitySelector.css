@@ -1,0 +1,117 @@
+.product-quantity-selector {
+    position: absolute;
+    margin-top: 50px;
+    background-color: rgb(255, 249, 249);
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.2s ease-out;
+    z-index: 1000;
+    white-space: nowrap;
+    margin: 100 auto;
+    margin-top: 280px;
+    width: fit-content;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+.quantity-btn:disabled {
+    background-color: #f5f5f5;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.quantity-btn.decrease {
+    color: #ff4444;
+}
+
+.quantity-btn.increase {
+    color: #00aa00;
+}
+
+.quantity-input {
+    width: 40px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
+}
+
+.quantity-input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.add-to-cart-btn {
+    background-color: #00aa00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #008800;
+    transform: scale(1.05);
+}

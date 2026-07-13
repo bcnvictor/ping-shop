@@ -1,0 +1,36 @@
+.tab-navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-0x5rem-xs);
+    /*ça c'est un test*/
+}
+
+.tab-button{
+  padding-left: var(--spacing-1x5rem-mid); /* 24px */
+  padding-right: var(--spacing-1x5rem-mid); /* 24px */
+  padding-top: var(--spacing-0x5rem-xs); /* 8px */
+  padding-bottom: var(--spacing-0x5rem-xs); /* 8px */
+  border-radius: 9999px; /* forme complètement arrondie */
+  transition: var(--transition-base);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+.tab-button:hover{
+  color: var(--color-primary); /* blue-600 */
+  background-color: var(--color-secondary); /* gray-50 */
+}
+
+.active-tab-button{
+  padding-left: var(--spacing-1x5rem-mid); /* 24px */
+  padding-right: var(--spacing-1x5rem-mid); /* 24px */
+  padding-top: var(--spacing-0x5rem-xs); /* 8px */
+  padding-bottom: var(--spacing-0x5rem-xs); /* 8px */
+  border-radius: 9999px; /* forme complètement arrondie */
+  transition: var(--transition-base);
+  background-color: var(--color-secondary); /* amber-100 */
+  color: var(--color-primary); /* gray-800 */
+  font-weight: 500; /* medium */
+  /*J'ai gardé les coms au cas où*/
+}

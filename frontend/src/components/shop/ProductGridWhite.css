@@ -1,0 +1,23 @@
+.product-grid-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product-grid-white {
+    background-color: #f5f5dc;
+    border-radius: var(--spacing-0x5rem-xs);
+    padding: var(--spacing-2rem-lrg);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: var(--spacing-1x5rem-mid);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}

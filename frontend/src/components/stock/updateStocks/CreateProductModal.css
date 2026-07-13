@@ -1,0 +1,73 @@
+
+.create-product-modal {
+  width: 500px;
+}
+
+.create-product-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.form-input,
+.form-select {
+  padding: 0.5rem;
+  background-color: #0f172a; 
+  border: 1px solid #334155;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #64748b;
+}
+
+.form-input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+
+.image-preview {
+  margin-top: 0.5rem;
+  width: 150px;
+  height: 150px;
+  background-color: #0f172a;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

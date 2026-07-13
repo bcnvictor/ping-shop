@@ -1,0 +1,22 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--spacing-1rem-sml);
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.logo:hover {
+  box-shadow: var(--spacing-1x5rem-mid);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}

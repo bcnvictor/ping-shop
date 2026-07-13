@@ -1,0 +1,21 @@
+package fr.epita.assistants.ping.api.request;
+
+import io.quarkus.runtime.annotations.RegisterForReflection;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.List;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@RegisterForReflection
+@Getter
+@Setter
+public class ExecRequest {
+
+    String feature;
+    String command;
+    List<String> params;
+}

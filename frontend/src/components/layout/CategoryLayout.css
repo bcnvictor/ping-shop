@@ -1,0 +1,30 @@
+.category-layout {
+  display: flex;
+  gap: var(--spacing-2rem-lrg);
+  padding: var(--spacing-2rem-lrg);
+  min-height: calc(100vh - 120px); /* Ajuster selon la hauteur du header */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.category-layout-sidebar {
+  flex-shrink: 0;
+}
+
+.category-layout-content {
+  flex-grow: 1;
+  min-width: 0; /* Permet au contenu de se rétrécir si nécessaire */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .category-layout {
+    flex-direction: column;
+    gap: var(--spacing-1rem-sml);
+    padding: var(--spacing-1rem-sml);
+  }
+  
+  .category-layout-sidebar {
+    width: 100%;
+  }
+}

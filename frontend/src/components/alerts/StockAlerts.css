@@ -1,0 +1,173 @@
+.stock-alerts-container {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  max-height: 70vh;
+  background: linear-gradient(135deg, #fdf0d5 0%, #f8e6a0 100%);
+  border: 2px solid #003049;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateY(-50%) translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+.stock-alerts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #003049;
+  color: #fdf0d5;
+  border-bottom: 2px solid #fdf0d5;
+}
+
+.alerts-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.close-alerts {
+  background: none;
+  border: none;
+  color: #fdf0d5;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.close-alerts:hover {
+  background-color: rgba(253, 240, 213, 0.2);
+}
+
+.alerts-list {
+  max-height: calc(70vh - 80px);
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border-left: 4px solid;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.alert-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert-item.low {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-left-color: #ffc107;
+}
+
+.alert-item.out {
+  background-color: rgba(220, 53, 69, 0.1);
+  border-left-color: #dc3545;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.alert-item.low .alert-icon {
+  color: #ffc107;
+}
+
+.alert-item.out .alert-icon {
+  color: #dc3545;
+}
+
+.alert-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert-product-name {
+  font-weight: 600;
+  color: #003049;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+.alert-brand {
+  font-weight: 400;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.alert-message {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.3;
+}
+
+.alert-item.out .alert-message {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.alert-item.low .alert-message {
+  color: #f57c00;
+  font-weight: 500;
+}
+
+/* Scrollbar personnalisée */
+.alerts-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.alerts-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.alerts-list::-webkit-scrollbar-thumb {
+  background: #003049;
+  border-radius: 3px;
+}
+
+.alerts-list::-webkit-scrollbar-thumb:hover {
+  background: #002a3a;
+}
+
+.alert-item {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

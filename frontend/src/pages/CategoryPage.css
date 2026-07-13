@@ -1,0 +1,29 @@
+.category-page {
+    padding-left: var(--spacing-2rem-lrg);
+    padding-right: var(--spacing-2rem-lrg);
+}
+
+.back-button {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: var(--spacing-0x5rem-xs) var(--spacing-1rem-sml);
+    border-radius: var(--spacing-0x5rem-xs);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.back-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.category-page-content {
+    display: flex;
+    gap: var(--spacing-2rem-lrg);
+    max-width: 100%;
+    align-items: flex-start;
+    margin-bottom:  var(--spacing-1rem-sml);
+}

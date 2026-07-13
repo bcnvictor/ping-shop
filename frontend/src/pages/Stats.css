@@ -1,0 +1,122 @@
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 128px;
+
+}
+
+.cards-container {
+  display: flex;
+  gap: 124px;
+  height: 400px;
+}
+
+.best-card{
+    width: 350px;
+    position: relative;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--slate-700);
+    color: var(--color-secondary);
+    justify-content: center;
+    border-radius: 12px;
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.chip-base {
+    position: absolute;
+    top: 12px;        /* top-6 = 1.5rem = 24px */
+    right: 12px;      /* right-6 = 1.5rem = 24px */
+    width: 32px;      /* w-8 = 2rem = 32px */
+    height: 32px;     /* h-8 = 2rem = 32px */
+    border-radius: 50%; /* rounded-full */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    display: flex;    /* flex */
+    align-items: center;     /* items-center */
+    justify-content: center; /* justify-center */
+}
+
+.chip-buyer {
+    background-color: #10b981;
+}
+
+.chip-seller {
+    background-color: #3b82f6; /* bg-blue-200 */
+}
+
+.crown {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 64px;
+  z-index: 10;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.top-products {
+  text-align: left;
+  color: var(--color-secondary);
+}
+
+.top-products-list {
+  display: flex;
+  gap: 32px;
+  width: 900px;
+  overflow-x: auto;
+}
+
+.product-card-header {
+  text-align: center;
+  padding-left: 16px;
+  text-align: center;
+  display: flex;
+}
+
+.top-product-card {
+  padding-top: 12px;
+  width: 250px;
+  height: 250px;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  border: 1px solid var(--slate-700);
+
+}
+
+.next-restock {
+  margin-top: 74px;
+  padding-left: 12px;
+  width: 825px;
+  height: 265px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  border: 1px solid var(--slate-700);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.next-restock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
